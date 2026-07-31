@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Commercial Solar Solutions | Innovative Solar Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Geist:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#e8bcb7",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-container": "#fffbff",
+                    "surface-container": "#eeeeee",
+                    "outline": "#936e6a",
+                    "on-secondary-fixed": "#1e1b1c",
+                    "tertiary-fixed-dim": "#ecc200",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffe07c",
+                    "secondary-fixed-dim": "#cdc4c5",
+                    "surface-container-low": "#f3f3f3",
+                    "on-surface": "#1a1c1c",
+                    "surface-tint": "#c00014",
+                    "surface": "#f9f9f9",
+                    "on-surface-variant": "#5e3f3c",
+                    "inverse-primary": "#ffb4ab",
+                    "error-container": "#ffdad6",
+                    "background": "#f9f9f9",
+                    "primary-container": "#e71520",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed": "#ffdad6",
+                    "on-secondary-container": "#696364",
+                    "on-primary-fixed-variant": "#93000d",
+                    "secondary": "#635d5e",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-dim": "#dadada",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "secondary-fixed": "#e9e0e1",
+                    "on-primary-fixed": "#410002",
+                    "on-secondary-fixed-variant": "#4b4546",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#cda800",
+                    "primary": "#bb0013",
+                    "on-background": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#725c00",
+                    "on-tertiary-fixed": "#231b00",
+                    "secondary-container": "#e9e0e1",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary-container": "#4d3e00",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#564500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-bold": ["Geist"],
+                    "caption": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-item {
+            border: 1px solid #E0E0E0;
+            background: white;
+            padding: 24px;
+            transition: all 0.2s ease-in-out;
+        }
+        .bento-item:hover {
+            border-color: #bb0013;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #bb0013 0%, #410002 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-margin-desktop h-20">
+<div class="h-12"><img alt="Innovative Solar Solutions Logo" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjfbwvOk0JdOwvGpHP-MqXLnVGUiqptx7sNZJP15mSmTyQf5PI-pNj_eENzRQQKIlHyB1i4nD7l9GCpOLA6xK5Koew2QkhTB9I480fE6KKqFD3RmXIGA82LpDePjZpkPzp7T6ajMnQYct4-PpvDcPpcc2MfII3E1Nmi7lhhKnxMJMZcR4-ehzFV3VDRm4WcTtWSqSfny_EQ6bJXv-L25PLb2jnkSNfX33tL0H9AkE-4ufIBN6_HcChrYCfOoBUsxsUWg"/></div>
+<nav class="hidden md:flex items-center space-x-gutter"><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-body-md text-body-md" href="#">Blog</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-body-md text-body-md" href="#">Calculator</a></nav>
+<button class="bg-primary text-on-primary px-6 py-3 font-headline-md text-label-bold uppercase tracking-widest rounded-lg hover:scale-105 transition-transform">
+                Get IN TOUCH</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center bg-gradient-to-r to-transparent" data-alt="A cinematic, high-contrast commercial rooftop solar installation with deep shadows and warm sunlight highlights." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2SXHsk5lI6o47FQyOVwFTBSytYEA49WW1uHR0IGMz0IwSigFXIwX-JA0s6xFnoTEWTmqDTJiTJyMQzrwyeZV7wjMYfV4oC_OOjZDReFbrZrRGASSCStu06TjE_HGrn8arJIlOoHOHYuKfItsFx_NNxzPBnnnh1ciwJGUliL3Ug_9lptmQLU6PaWq_GxUs70BHkXRsAnS8dftwE8jAFhra0mOcTbuO-GtbUUonvp-nTGEZR-do7cg-");'></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-margin-desktop w-full"><div class="grid grid-cols-2 gap-xl items-center">
+<div class="md:col-span-1">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary font-label-bold text-caption uppercase mb-6 tracking-widest">Solar Solutions</span>
+<h1 class="text-display-lg font-display-lg text-white mb-6 uppercase leading-none">Clean Energy <br/><span class="text-primary">For Your Business</span></h1>
+<p class="text-body-lg font-body-lg text-white/80 mb-8">
+            Save money and help the planet with our high-quality solar panels made for big buildings.
+        </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-2 text-white font-label-bold">
+<span class="material-symbols-outlined text-primary">check_circle</span> 24/7 Monitoring
+            </li>
+<li class="flex items-center gap-2 text-white font-label-bold">
+<span class="material-symbols-outlined text-primary">check_circle</span> Government Support
+            </li>
+<li class="flex items-center gap-2 text-white font-label-bold">
+<span class="material-symbols-outlined text-primary">check_circle</span> Live Monitoring
+            </li>
+<li class="flex items-center gap-2 text-white font-label-bold">
+<span class="material-symbols-outlined text-primary">check_circle</span> Expert Maintenance
+            </li>
+<li class="flex items-center gap-2 text-white font-label-bold">
+<span class="material-symbols-outlined text-primary">check_circle</span> Max Energy Generation
+            </li>
+</ul>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-headline-md text-label-bold uppercase rounded-lg hover:bg-on-primary-fixed-variant transition-colors">Learn More</button>
+</div>
+</div>
+<div class="md:col-span-1 bg-white p-8 rounded-lg shadow-2xl">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-6 uppercase">GEt a Free Quote</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label-bold text-caption uppercase text-on-surface-variant mb-1">Full Name</label>
+<input class="w-full border border-outline-variant p-3 rounded focus:border-primary focus:ring-0 outline-none" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-caption uppercase text-on-surface-variant mb-1">Email Address</label>
+<input class="w-full border border-outline-variant p-3 rounded focus:border-primary focus:ring-0 outline-none" placeholder="email@company.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-bold text-caption uppercase text-on-surface-variant mb-1">Phone Number</label>
+<input class="w-full border border-outline-variant p-3 rounded focus:border-primary focus:ring-0 outline-none" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<button class="w-full bg-primary text-white py-4 font-headline-md text-label-bold uppercase tracking-widest rounded hover:bg-on-primary-fixed-variant transition-colors" type="submit">Get a quote</button>
+</form>
+</div>
+</div></div>
+</section>
+<!-- ROI & Business Benefits (Bento Grid) -->
+<!-- Technical Specs / Data Visualization -->
+<!-- Consultation Form Section -->
+<section class="py-xl bg-inverse-surface text-white">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<!-- Left Column: Advantages -->
+<div class="space-y-8">
+<h2 class="text-headline-lg font-display-lg uppercase mb-8">Advantages of Commercial Solar</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">payments</span>
+<div>
+<h3 class="font-label-bold uppercase mb-1">Lower Electricity Bills</h3>
+<p class="text-body-md text-white/80">Save a lot of money on your monthly power costs.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">eco</span>
+<div>
+<h3 class="font-label-bold uppercase mb-1">Green Business</h3>
+<p class="text-body-md text-white/80">Show your customers you care about the planet.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<div>
+<h3 class="font-label-bold uppercase mb-1">Energy Independence</h3>
+<p class="text-body-md text-white/80">Stop worrying about rising power prices or blackouts.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">roofing</span>
+<div>
+<h3 class="font-label-bold uppercase mb-1">Use Your Roof</h3>
+<p class="text-body-md text-white/80">Turn empty roof space into a money-saving asset.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Process -->
+<div class="space-y-8">
+<h2 class="text-headline-lg font-display-lg uppercase mb-8">Our Simple Process</h2>
+<div class="space-y-6 relative">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+<div class="w-0.5 h-full bg-white/20"></div>
+</div>
+<div class="pb-6">
+<h3 class="font-label-bold uppercase mb-1">1. Site Check</h3>
+<p class="text-body-md text-white/80">We visit your building to see how much solar you can fit.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+<div class="w-0.5 h-full bg-white/20"></div>
+</div>
+<div class="pb-6">
+<h3 class="font-label-bold uppercase mb-1">2. Smart Design</h3>
+<p class="text-body-md text-white/80">Our engineers create the best solar plan for your needs.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+<div class="w-0.5 h-full bg-white/20"></div>
+</div>
+<div class="pb-6">
+<h3 class="font-label-bold uppercase mb-1">3. Quick Setup</h3>
+<p class="text-body-md text-white/80">We install the panels fast with zero mess or trouble.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-primary mt-2"></div>
+</div>
+<div>
+<h3 class="font-label-bold uppercase mb-1">4. Turn On</h3>
+<p class="text-body-md text-white/80">We connect everything and start your savings immediately.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width"><img alt="Footer Design" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeI-fPLwYpG1i78MZCKbAufm6T3NsqG3xGh2j-ePj4a3hhoPBUb1cZwmODQebp1fXiY-GkS-7iXWCzN0NXQ9qREM-WNWXzmuzbrE1VBgTOhMTmyoTrBQ2xLcx4dCsTofEQb5U0Z8h4a_8RVAy_ALJAKGmI3h9ySWaFfzcIKXvtI5Gh6VfSeLWZp0t4XxQI9ZgY2YIOmE017gL8mrcaXvun6nYPepSZ6Q09F_c8k2j74JO2WqX5jGRaq5BtxUFNPqC9TQ"/></footer>
+<script>
+        // Simple form interaction
+        const form = document.getElementById('consultation-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'ANALYZING SITE...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                btn.innerText = 'PROJECTION SENT';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-600');
+            }, 2000);
+        });
+
+        // Sticky header background shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body></html>

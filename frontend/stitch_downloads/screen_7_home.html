@@ -1,0 +1,467 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head></head><body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-white"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ecc200",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#4b4546",
+                        "primary": "#bb0013",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-secondary-fixed": "#1e1b1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#725c00",
+                        "inverse-primary": "#ffb4ab",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "surface-tint": "#c00014",
+                        "surface": "#f9f9f9",
+                        "outline-variant": "#e8bcb7",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#cda800",
+                        "secondary-fixed": "#e9e0e1",
+                        "on-primary-container": "#fffbff",
+                        "on-surface": "#1a1c1c",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#e9e0e1",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#cdc4c5",
+                        "tertiary-fixed": "#ffe07c",
+                        "outline": "#936e6a",
+                        "on-surface-variant": "#5e3f3c",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-container": "#696364",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#564500",
+                        "surface-container-high": "#e8e8e8",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#410002",
+                        "on-error": "#ffffff",
+                        "secondary": "#635d5e",
+                        "on-tertiary-container": "#4d3e00",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary-fixed-variant": "#93000d",
+                        "primary-container": "#e71520"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Geist"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "caption": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    }catch(_e){}</script><meta charset="utf-8">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-secondary w-full">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-margin-desktop py-md w-full">
+<!-- Brand Logo -->
+<div class="flex items-center gap-sm"><img alt="Innovative Solar Solutions Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHFPEP9RFOhIaQcGU6yld9zG9mRCTlUH7YHD_KrPu0n77oddV9f_pAtD8om5-FXw8zKZA5wDmbtCW-d7DZZMO39okI1j4LvwkJ_xt7Y4bJHkTMlRTTGTELzUdve9xo1q26GFLCbzfyCkj_2CcAfpv3VqD4m8pc0pLk6qAPwkrjysRjxg6uRZqSq8pdfGCrflokgE79BjW-pbusIEArNzsgCHcQUERllXx26fs57gj88YzMASvdfcABAB_aIgR-KYDYrw"></div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-lg">
+<!-- Home Dropdown -->
+<div class="relative nav-dropdown group">
+<button class="flex items-center gap-xs text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-label-bold text-label-bold transition-all">
+                        Home <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="dropdown-menu hidden absolute left-0 top-full pt-4 w-48 animate-in fade-in slide-in-from-top-2 duration-200">
+<div class="bg-surface-container-lowest shadow-lg border border-outline-variant p-2 flex flex-col gap-1">
+<a class="px-4 py-2 text-label-bold font-label-bold text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" href="#about">About Us</a>
+<a class="px-4 py-2 text-label-bold font-label-bold text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" href="#offerings">Our Offerings</a>
+<a class="px-4 py-2 text-label-bold font-label-bold text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" href="#faqs">FAQs</a>
+</div>
+</div>
+</div>
+<!-- Services Dropdown -->
+<div class="relative nav-dropdown group">
+<button class="flex items-center gap-xs text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors font-label-bold text-label-bold">
+                        Services <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="dropdown-menu hidden absolute left-0 top-full pt-4 w-48 animate-in fade-in slide-in-from-top-2 duration-200">
+<div class="bg-surface-container-lowest shadow-lg border border-outline-variant p-2 flex flex-col gap-1">
+<a class="px-4 py-2 text-label-bold font-label-bold text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" href="#">On-grid</a>
+<a class="px-4 py-2 text-label-bold font-label-bold text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" href="#">Off-grid</a>
+<a class="px-4 py-2 text-label-bold font-label-bold text-secondary hover:text-primary hover:bg-surface-container-low transition-colors" href="#">Hybrid</a>
+</div>
+</div>
+</div>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors font-label-bold text-label-bold" href="#">Blog</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors font-label-bold text-label-bold" href="#">Calculator</a>
+</div>
+<!-- CTA -->
+<button class="bg-primary text-on-primary px-md py-sm font-label-bold text-label-bold uppercase tracking-wider rounded-DEFAULT hover:bg-primary-container active:scale-95 transition-all duration-150">
+                Get in Touch
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 hero-gradient z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="A sprawling industrial solar panel farm captured at dusk, with the deep orange sun low on the horizon casting long shadows and highlights across thousands of sleek, dark rectangular panels. The scene is shot with high contrast and engineering precision, using a cinematic wide-angle lens. The atmosphere is energetic and powerful, emphasizing the massive scale of renewable energy infrastructure with deep blacks and vibrant warm highlights." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuACQrZGWJKfrTGjE0RY-xw-k7inF-nT446BUkCsjTVsO2sZ77TAdFxKiaJJvi_KXs0jgdaBndANxBTphsLJmmcKYtnz_sGpks2-0ACCOu2PhpTKuualsnKyCnRG_Chwqe0eaq3HW0CleMj5tdAfXiNWZhHiS5s-hETniWbGcEIiUM20cObTnYXBsUtR3J-m9dAehccX_MAJEFXv1Vfupdmn-OTwxE5PmJmmZPinpiB8QLPmVywo-Ry5&quot;);"></div>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-margin-desktop grid md:grid-cols-2 gap-lg items-center">
+<div class="space-y-md">
+<div class="inline-flex items-center gap-xs bg-primary/20 border border-primary/30 px-3 py-1 text-primary-fixed-dim font-label-bold text-caption uppercase tracking-widest"> Reliable Solar Power</div>
+<h1 class="text-display-lg font-display-lg text-white leading-none">The Future of <span class="text-primary">Solar Energy</span> starts here.</h1>
+<p class="text-body-lg font-body-lg text-surface-container-highest max-w-lg">We provide high-quality solar panel installation for your home or business. Save money and protect the environment with our simple, expert solutions.</p>
+<div class="flex gap-md pt-sm">
+<button class="bg-primary text-on-primary px-lg py-md font-headline-md text-body-md rounded-DEFAULT hover:bg-primary-container transition-all">Get Free<br>Consultation</button>
+<button class="bg-transparent border-2 border-white text-white px-lg py-md font-headline-md text-body-md rounded-DEFAULT hover:bg-white hover:text-inverse-surface transition-all">Savings Calculator</button>
+</div>
+</div>
+<div class="hidden md:flex justify-end">
+<div class="relative group">
+<div class="absolute -inset-1 bg-primary/50 blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+</div>
+</div>
+</div>
+</section><section class="py-xl bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+      <div class="space-y-lg">
+        <div class="space-y-md">
+          <h6 class="text-primary font-label-bold text-label-bold tracking-widest uppercase">Engineering Excellence</h6>
+          <h2 class="text-display-lg font-display-lg text-inverse-surface leading-tight">Premium Structural <span class="text-primary">Engineering</span></h2>
+          <p class="text-body-lg font-body-lg text-secondary">We build the strongest foundations for your solar investment using world-class materials and technology.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-md">
+          <div class="flex gap-md">
+            <div class="bg-primary/10 p-sm rounded-DEFAULT h-fit">
+              <span class="material-symbols-outlined text-primary">architecture</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md font-headline-md text-inverse-surface text-[20px]">High-Strength ZAM Structure</h4>
+              <p class="text-body-md font-body-md text-secondary">2.5mm thick, 4x3 inch width, with a 25-year rust-free warranty.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-md">
+            <div class="bg-primary/10 p-sm rounded-DEFAULT h-fit">
+              <span class="material-symbols-outlined text-primary">fitness_center</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md font-headline-md text-inverse-surface text-[20px]">Superior Strength</h4>
+              <p class="text-body-md font-body-md text-secondary">Prefabricated design with 4x more strength than standard HDGI structures.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-md">
+            <div class="bg-primary/10 p-sm rounded-DEFAULT h-fit">
+              <span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md font-headline-md text-inverse-surface text-[20px]">Exclusive German Tech</h4>
+              <p class="text-body-md font-body-md text-secondary">The only provider in UP using this advanced technology.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-md">
+            <div class="bg-primary/10 p-sm rounded-DEFAULT h-fit">
+              <span class="material-symbols-outlined text-primary">air</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md font-headline-md text-inverse-surface text-[20px]">Wind Resilience</h4>
+              <p class="text-body-md font-body-md text-secondary">Tested to withstand winds up to 150km/hr.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-md">
+            <div class="bg-primary/10 p-sm rounded-DEFAULT h-fit">
+              <span class="material-symbols-outlined text-primary">layers</span>
+            </div>
+            <div>
+              <h4 class="text-headline-md font-headline-md text-inverse-surface text-[20px]">Advanced Grouting</h4>
+              <p class="text-body-md font-body-md text-secondary">Fosroc GP2 chemical for superior waterproofing and a rock-solid metal bond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-1 bg-primary/20 blur-sm rounded-lg"></div>
+        <div class="relative aspect-video overflow-hidden rounded-lg border border-outline-variant shadow-lg">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSOFIDSgykWL6EOCk9tPk7xrY2sym8l-CcfS5J-MF7VDfZSb1xRuCErmGpMAk5kZfHqqcFq4CRmZctzAQx08Ecf6N53YlS2YM08gD65ugTUoPvdnmQXGwCTNYiV0svHJQkAQ7qG54YGKDszQSw-kUE8hNy26plibw2-ELxyKrp9CPsZOwSZBSAH-cvGvNiXvCPlydAwHVwPK7UjMOVGmG8q-9V08bX6fEnGZ8lmrgSJfFbIuSTk1vn4lP1lcglu3VihLhhujC6ZYs" alt="High-quality close-up of ZAM solar mounting structure" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Offerings Bento Grid -->
+<section class="py-xl max-w-7xl mx-auto px-margin-desktop" id="offerings">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-md">
+<div class="max-w-2xl">
+<h2 class="text-headline-lg font-headline-lg text-inverse-surface">Solar Power for Everyone</h2>
+<p class="text-body-lg font-body-lg text-secondary mt-xs">Simple and reliable solar solutions for homes, businesses, and farms.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-gutter h-auto md:h-[600px] md:grid-cols-3">
+<!-- Residential Offering -->
+<div class="group bento-card relative overflow-hidden bg-white border border-outline-variant p-lg flex flex-col transition-all duration-700 opacity-100 md:col-span-1 justify-end"><div class="mb-auto relative z-10"><span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">home</span></div>
+<div class="absolute inset-0 z-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="A modern architectural home with a minimalist white facade and large glass windows, featuring a sleek, integrated roof-mounted solar array. The lighting is crisp, bright, and airy, emphasizing a high-end residential eco-conscious lifestyle. The image is framed to highlight the clean lines and technological sophistication of the solar panels against the clear blue sky."></div>
+</div>
+<div class="relative z-10">
+<h3 class="text-headline-md font-headline-md text-inverse-surface mb-sm">Residential Solar</h3>
+<p class="text-body-md font-body-md text-secondary max-w-md mb-md">Save money on your monthly bills and power your home with clean energy from the sun.</p>
+<button class="w-full bg-primary text-white py-sm font-label-bold text-label-bold">Learn More</button>
+</div>
+</div>
+<!-- Commercial Offering -->
+<div class="group bento-card relative overflow-hidden bg-inverse-surface p-lg flex flex-col transition-all duration-700 opacity-100 md:col-span-1">
+<div class="mb-auto">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">business</span>
+</div>
+<div class="mt-lg">
+<h3 class="text-headline-md font-headline-md text-white mb-sm">&nbsp; &nbsp; &nbsp; &nbsp; Commercial</h3>
+<p class="text-body-md font-body-md text-surface-variant mb-md">Cut your business costs and help the planet with powerful solar systems built for companies.</p>
+<ul class="space-y-sm mb-lg">
+</ul>
+<button class="w-full bg-primary text-white py-sm font-label-bold text-label-bold">Learn More</button>
+</div>
+</div>
+<!-- Single Society Offering -->
+<!-- Hybrid Tech -->
+<div class="md:col-span-1 group bento-card relative overflow-hidden bg-surface-container-low border border-outline-variant p-lg flex flex-col transition-all duration-700 opacity-100"><div class="mb-auto"><span class="material-symbols-outlined text-primary text-4xl">agriculture</span></div><div class="mt-lg"><h3 class="text-headline-md font-headline-md text-inverse-surface mb-sm">Agricultural Projects</h3><p class="text-body-md font-body-md text-secondary mb-md">Keep your farm running with solar power for your water pumps, greenhouses, and livestock.</p><button class="w-full bg-primary text-white py-sm font-label-bold text-label-bold">Learn More</button></div></div></div>
+</section>
+<!-- About Us Section -->
+<section class="bg-inverse-surface py-xl overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-margin-desktop grid md:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 border-l-4 border-t-4 border-primary/30"></div>
+<div class="aspect-square bg-cover bg-center border-4 border-primary" data-alt="A portrait of a diverse team of engineers in a modern, brightly lit solar monitoring station. They are wearing professional workwear with company branding, looking confidently at a series of large digital screens displaying real-time energy metrics and solar farm analytics. The lighting is cold and precise, suggesting a high-tech corporate environment with a focus on engineering reliability and professional collaboration." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBQyAGB02DINhcu-6wMxl8mMRmcMYa6CgVOOcq8CPYMB-ZO0WJ8TciXD79NVIv_zWt_1bLJuSW1juWMwYaMc4oJny23g-J9q2AeqGczsMvVcoTJ2G05zr5WWOLVqm3ImhaHn-H1yWJV3HOITzjFjYOBMxbJtGTwl9Ie6tSyKKLGH5iUcerZP0CPzdzVs8p4tUADXcgtpm4PkKjBwwiNslaC50D42XdIAJ3qqj9pux8Z9qIVPp30A-E9&quot;);"></div>
+<div class="absolute -bottom-6 -right-6 bg-primary p-md max-w-xs">
+<p class="text-white font-headline-md text-headline-md">10+</p>
+<p class="text-surface-container-highest text-caption font-label-bold">YEARS OF ENGINEERING EXCELLENCE</p>
+</div>
+</div>
+<div class="space-y-md">
+<h6 class="text-primary font-label-bold text-label-bold tracking-widest uppercase">The Team Behind the Power</h6>
+<h2 class="text-display-lg font-display-lg text-white leading-tight">Helping You Build a <span class="text-primary">Greener</span> Future.</h2>
+<p class="text-body-lg font-body-lg text-surface-variant">At Innovative Solar Solutions, we do more than just install panels. We build smart energy systems. Our team of experts is here to make clean energy easy and reliable for your home or business.</p>
+<div class="grid grid-cols-2 gap-md pt-md">
+<div><h5 class="text-white font-headline-md text-body-md mb-xs">High Accuracy</h5><p class="text-caption font-body-md text-secondary-fixed-dim">We make sure your system produces as much power as possible.</p></div>
+<div><h5 class="text-white font-headline-md text-body-md mb-xs">Full Support</h5><p class="text-caption font-body-md text-secondary-fixed-dim">We handle everything from paperwork to watching over your system day and night.</p></div>
+</div>
+<div class="pt-lg">
+<button class="bg-white text-inverse-surface px-md py-sm font-label-bold text-label-bold uppercase hover:bg-primary hover:text-white transition-colors">Get Quote</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-xl bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-margin-desktop grid md:grid-cols-2 gap-xl">
+<!-- Left Column: Form -->
+<div class="space-y-lg">
+<div class="space-y-md">
+<h2 class="text-display-lg font-display-lg text-inverse-surface leading-tight">Let's build your solar future.</h2>
+<div class="w-24 h-1.5 bg-primary"></div>
+<p class="text-body-lg font-body-lg text-secondary">Contact our experts today for a personalized site visit and custom quote.</p>
+</div>
+<form class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="text-label-bold font-label-bold text-inverse-surface uppercase tracking-wider">Full Name</label>
+<input class="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white" placeholder="Your Name" type="text">
+</div>
+<div class="space-y-xs">
+<label class="text-label-bold font-label-bold text-inverse-surface uppercase tracking-wider">Email Address</label>
+<input class="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white" placeholder="email@example.com" type="email">
+</div>
+</div>
+<div class="space-y-xs">
+<label class="text-label-bold font-label-bold text-inverse-surface uppercase tracking-wider">Message</label>
+<textarea class="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-lg py-md font-label-bold text-label-bold uppercase tracking-widest flex items-center gap-sm hover:bg-primary-container transition-all" type="submit">
+          Submit Request <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+<!-- Right Column: Info & Map -->
+<div class="space-y-lg">
+<div class="bg-surface-container-low p-lg space-y-lg border border-outline-variant">
+<div class="flex items-start gap-md">
+<div class="bg-primary/10 p-sm text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="text-label-bold font-label-bold text-inverse-surface uppercase">Call Us</p>
+<p class="text-body-md font-body-md text-secondary">+91 70073 45031</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="bg-primary/10 p-sm text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-label-bold font-label-bold text-inverse-surface uppercase">Email Us</p>
+<p class="text-body-md font-body-md text-secondary">adityakaushal2@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<div class="bg-primary/10 p-sm text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-label-bold font-label-bold text-inverse-surface uppercase">Our OFFICE</p>
+<p class="text-body-md font-body-md text-secondary">Lucknow 226001 Uttar Pradesh</p>
+</div>
+</div>
+</div>
+<div class="relative aspect-video overflow-hidden border border-outline-variant"><div class="absolute inset-0 bg-surface-container-highest opacity-20"></div><div class="absolute inset-0 flex items-center justify-center"><div class="relative"><span class="material-symbols-outlined text-primary text-4xl animate-bounce" style="font-variation-settings: 'FILL' 1">location_on</span><div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-1 bg-primary/30 rounded-full blur-sm"></div></div></div><div class="absolute bottom-4 left-4 bg-white/90 p-2 border border-outline-variant shadow-sm"><p class="text-caption font-label-bold text-inverse-surface uppercase">Lucknow, UP</p></div><svg class="w-full h-full opacity-30" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"><defs><pattern height="40" id="grid" patternUnits="userSpaceOnUse" width="40"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern></defs><rect fill="url(#grid)" height="100%" width="100%"></rect><path d="M0 150 Q 200 100 400 200 T 800 150" fill="none" opacity="0.5" stroke="currentColor" stroke-width="2"></path><path d="M100 0 Q 150 200 50 450" fill="none" opacity="0.5" stroke="currentColor" stroke-width="2"></path></svg></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<div class="flex items-center gap-xs mb-lg">
+<span class="material-symbols-outlined text-primary font-bold" style="font-variation-settings: 'FILL' 1">bolt</span>
+<h2 class="text-headline-lg font-headline-lg text-inverse-surface uppercase tracking-tight">Solar Shorts</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-md">
+<!-- Maintenance Card -->
+<div class="relative aspect-[3/4] overflow-hidden rounded-DEFAULT group cursor-pointer">
+<img alt="Maintenance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGMX1WeOCDPQr_657FN2eo7r7E1zpzA7FM_VyEDQPG0XRrvAP0On4NG8S-6fFiBGyBlyyKn9cPYCE7NcEIYz9r8DYgYk3kGrdsaRm3M5Wtvc8JzNum845IL4Wy2cvRlbNwa4Mm6v49oPcD0GW08-k4aJ9Uw_jqxi3yKVH3BCPDoVWEa4J9De8qSvWuNfAPYpd6PP1TfbM_f_uhacgDtTUzo9JO0l5KwbMwRjjwmGqJP3yksXv4Wx1G">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4">
+<div class="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-[20px]" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-tertiary-fixed font-label-bold text-caption uppercase mb-1">Maintenance</p>
+<h3 class="text-white font-bold text-body-md leading-tight">How to clean your panels like a pro</h3>
+</div>
+</div>
+<!-- Products Card -->
+<div class="relative aspect-[3/4] overflow-hidden rounded-DEFAULT group cursor-pointer">
+<img alt="Products" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVPOKaKH4r18cRc2Kj6C7vH0lxHz92P8Ht0lHyxkKvdC28M3rjXeIaEg3Djwp5fTHJRuQDiGoQrprrxwUnx42Ci4wWlGnN2iJAk8fSTTyS2WopOgHtHcQSoaro8Bu5qA4wE026aq2aqpvaQXRgv9oq6gyJFItTlR5wK5iC3MN7ek_di-XZ8_rw4t0JAUtBfdRfRPGVj7Aev7QqMwp9DldJto8ptiG5QeaEjZT8Ny3QAkuzMEdeMhZH">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4">
+<div class="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-[20px]" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-tertiary-fixed font-label-bold text-caption uppercase mb-1">Products</p>
+<h3 class="text-white font-bold text-body-md leading-tight">The best battery for your system</h3>
+</div>
+</div>
+<!-- Tutorial Card -->
+<div class="relative aspect-[3/4] overflow-hidden rounded-DEFAULT group cursor-pointer">
+<img alt="Tutorial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByKfVz_f02vbBx2Yn3S39iYBf8gH55nGdi9W_-_EB5yYY1G-cdxCj_IP_0bg3oCFRxWT47kBMjQ6AnriqE8FAnXoN9bqFDoyPkHqpGBMnZ2na_rHQwpxPL2KKuNjkMg2gyPEqjDkOtn7y6PKylzm7Y-fxBFeNKsFsMlib3uBsm7vqeqreNu_AewbmApoXCzxOdHtJkc1LcDsA7T0-uHG_7865KdRBfDshBtQURZOqXII6-3j_ABZUH">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4">
+<div class="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-[20px]" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-tertiary-fixed font-label-bold text-caption uppercase mb-1">Tutorial</p>
+<h3 class="text-white font-bold text-body-md leading-tight">Reading your solar inverter</h3>
+</div>
+</div>
+<!-- Efficiency Card -->
+<div class="relative aspect-[3/4] overflow-hidden rounded-DEFAULT group cursor-pointer">
+<img alt="Efficiency" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxojtQ9I-2VVJD9NOLGu0a-_TLrJFJcOceGEfWgN392FUVYjTmdx62DZkqQzv7VI1D_UvtPnAXtSOfUwaG0caW_Hsl-4OBYW9xQ27pu39JZ6SiwY5knpF5MxsKAhYTpel6CB5lgdfcGsl9sxvtFo1q08q2DOkTFTijLQo1ViqlVEEgWKMVdZ9qzuV3RovfoBmMaSZis-b4h3673tjyQxU-VwiT-Duo6gIEyfWs_Y7TQAsZIX2sIcAn">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4">
+<div class="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-[20px]" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-tertiary-fixed font-label-bold text-caption uppercase mb-1">Efficiency</p>
+<h3 class="text-white font-bold text-body-md leading-tight">Why tracking panels work better</h3>
+</div>
+</div>
+<!-- Weather Card -->
+<div class="relative aspect-[3/4] overflow-hidden rounded-DEFAULT group cursor-pointer">
+<img alt="Weather" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH52EIKSEqqzIQUpQ-tsa2FUklK5DHDw83knTm0kSaCyAL-08kEZqjn1G22i3SeqimH_Z_i0Z7hYO9VApdKBG-MsJjLP9YXuxq5VyPit6yMU6Ilt8mSDxHekfwWVDpsjWHSDVafCyE-l_B46XbCzMSnmVkJVwMXIZSe8g2JkVY03fEJ6JPXV4zOt3Bbhu4C71N9wWnbIMXzb-qWPeLli7VlNJlGu3e93nvXc_NiBJfAZVDC-qOAF5J">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4">
+<div class="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-[20px]" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<p class="text-tertiary-fixed font-label-bold text-caption uppercase mb-1">Weather</p>
+<h3 class="text-white font-bold text-body-md leading-tight">Does solar work in the rain?</h3>
+</div>
+</div>
+</div>
+</div>
+</section><footer class="bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant w-full"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-7xl mx-auto w-full"><div class="space-y-md"><div class="text-headline-md font-headline-md font-bold text-white">Innovative Solar Solutions</div><p class="text-body-md font-body-md opacity-70">Helping you switch to clean solar energy with expert service and modern technology.</p></div><div class="space-y-md"><h4 class="text-white font-label-bold text-label-bold uppercase tracking-widest">SOLUTIONS</h4><ul class="flex flex-col gap-sm"><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Residential</a></li><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Commercial</a></li><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Industrial</a></li></ul></div><div class="space-y-md"><h4 class="text-white font-label-bold text-label-bold uppercase tracking-widest">TECHNOLOGY</h4><ul class="flex flex-col gap-sm"><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">On-grid</a></li><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Off-grid</a></li><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Hybrid</a></li></ul></div><div class="space-y-md"><h4 class="text-white font-label-bold text-label-bold uppercase tracking-widest">COMPANY</h4><ul class="flex flex-col gap-sm"><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">About Us</a></li><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Privacy Policy</a></li><li class=""><a class="text-surface-variant hover:text-primary transition-all duration-200 text-body-md" href="#">Terms of Service</a></li></ul></div></div><div class="border-t border-outline/20 px-margin-desktop py-md max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-md"><p class="text-caption font-caption">© 2024 Innovative Solar Solutions. All rights reserved.</p><div class="flex gap-lg"><span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">public</span><span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">share</span><span class="material-symbols-outlined text-white cursor-pointer hover:text-primary transition-colors">mail</span></div></div></footer>
+<!-- FAB -->
+<div class="fixed bottom-margin-desktop right-margin-desktop z-40">
+</div>
+<script>
+        // Smooth reveal for bento cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10', 'opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'translate-y-10', 'opacity-0');
+            observer.observe(card);
+        });
+    </script>
+
+
+</body></html>
