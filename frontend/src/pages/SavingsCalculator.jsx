@@ -1,22 +1,30 @@
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SavingsCalculator() {
   const [monthlyBill, setMonthlyBill] = useState(7500);
   const [systemSize, setSystemSize] = useState(5);
+  const navigate = useNavigate();
 
   const results = useMemo(() => {
     const monthlySavings = Math.round(monthlyBill * 0.82);
     const yearlySavings = monthlySavings * 12;
     const paybackYears = Math.max(3, Math.round((systemSize * 110000) / Math.max(yearlySavings, 1)));
+    const co2OffsetTonnes = +(systemSize * 1.2).toFixed(1);
 
-    return { monthlySavings, yearlySavings, paybackYears };
+    return { monthlySavings, yearlySavings, paybackYears, co2OffsetTonnes };
   }, [monthlyBill, systemSize]);
+
+  const handleReset = () => {
+    setMonthlyBill(7500);
+    setSystemSize(5);
+  };
 
   return (
     <div className="bg-background text-on-background min-h-screen">
       <section className="relative overflow-hidden bg-surface py-xl">
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(187,0,19,0.12),transparent_35%),radial-gradient(circle_at_top_right,rgba(187,0,19,0.18),transparent_30%)]" />
-        <div className="max-w-7xl mx-auto px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+        <div className="max-w-7xl mx-auto px-4 lg:px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
           <div className="space-y-md">
             <span className="inline-flex items-center gap-xs bg-primary text-on-primary px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest">
               Solar ROI Tool
@@ -39,6 +47,7 @@ export default function SavingsCalculator() {
                 value={monthlyBill}
                 onChange={(event) => setMonthlyBill(Number(event.target.value))}
                 className="w-full mt-sm"
+                style={{ accentColor: "#bb0013" }}
               />
               <div className="flex justify-between text-body-md mt-xs text-surface-variant">
                 <span>₹1,000</span>
@@ -57,6 +66,7 @@ export default function SavingsCalculator() {
                 value={systemSize}
                 onChange={(event) => setSystemSize(Number(event.target.value))}
                 className="w-full mt-sm"
+                style={{ accentColor: "#bb0013" }}
               />
               <div className="flex justify-between text-body-md mt-xs text-surface-variant">
                 <span>1 kW</span>
@@ -65,7 +75,7 @@ export default function SavingsCalculator() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-md pt-sm">
+            <div className="grid grid-cols-2 gap-md pt-sm">
               <div className="bg-white/5 rounded-lg p-md border border-white/10">
                 <p className="text-caption uppercase tracking-widest text-surface-variant">Monthly savings</p>
                 <p className="text-headline-md font-headline-md">₹{results.monthlySavings.toLocaleString("en-IN")}</p>
@@ -78,13 +88,32 @@ export default function SavingsCalculator() {
                 <p className="text-caption uppercase tracking-widest text-surface-variant">Payback</p>
                 <p className="text-headline-md font-headline-md">{results.paybackYears} years</p>
               </div>
+              <div className="bg-white/5 rounded-lg p-md border border-white/10">
+                <p className="text-caption uppercase tracking-widest text-surface-variant">CO₂ offset</p>
+                <p className="text-headline-md font-headline-md">{results.co2OffsetTonnes} t/yr</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-md pt-sm">
+              <button
+                onClick={handleReset}
+                className="px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest border border-white/20 text-white/70 hover:border-white/50 hover:text-white transition-colors"
+              >
+                Reset
+              </button>
+              <button
+                onClick={() => navigate("/#contact-section")}
+                className="flex-1 bg-primary text-on-primary px-lg py-sm font-label-bold text-label-bold uppercase tracking-widest hover:bg-primary-container active:scale-95 transition-all rounded-sm text-center"
+              >
+                Get Free Quote
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-xl bg-white">
-        <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-3 gap-gutter text-left">
+        <div className="max-w-7xl mx-auto px-4 lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-3 gap-gutter text-left">
           {[
             ["Bill offset", "payments", "See how much of your electricity bill solar can cover each month."],
             ["Carbon impact", "eco", "Estimate the amount of clean energy you move onto your roof or land."],
