@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AgriculturalSolar() {
+  const navigate = useNavigate();
   const [quoteSubmitted, setQuoteSubmitted] = useState(false);
   const [formData, setFormData] = useState({ fullName: "", email: "", phone: "" });
 
@@ -68,11 +70,8 @@ export default function AgriculturalSolar() {
               </ul>
               <div className="flex flex-wrap gap-md">
                 <button
-                  onClick={() => {
-                    const element = document.getElementById("advantages-section");
-                    if (element) element.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="bg-primary text-on-primary px-lg py-md rounded font-headline-md hover:scale-105 active:scale-95 transition-all text-center"
+                  onClick={() => navigate("/#contact-section")}
+                  className="bg-primary text-on-primary px-lg py-base text-headline-md font-headline-md rounded hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-sm cursor-pointer"
                 >
                   Learn More
                 </button>
@@ -80,62 +79,8 @@ export default function AgriculturalSolar() {
             </div>
 
             {/* Farm Quote Form */}
-            <div className="bg-surface rounded-xl p-xl shadow-lg border border-outline-variant text-left mt-8 md:mt-0">
-              <h3 className="text-headline-md font-display-lg text-on-surface mb-md font-bold">
-                GET A FREE QUOTE
-              </h3>
-              {quoteSubmitted ? (
-                <div className="p-md bg-green-50 text-green-800 rounded-md border border-green-200">
-                  <p className="font-bold">Agricultural Quote Request Received!</p>
-                  <p className="text-sm mt-1">Our solar technicians will assess your land boundary and draft a feasibility report within 2 business days.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-md">
-                  <div className="flex flex-col gap-xs">
-                    <label className="text-label-bold text-on-surface-variant font-bold">Name</label>
-                    <input
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full p-sm rounded border border-outline-variant bg-surface-container-low focus:outline-primary outline-none"
-                      placeholder="Your Name"
-                      type="text"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-xs">
-                    <label className="text-label-bold text-on-surface-variant font-bold">Email</label>
-                    <input
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full p-sm rounded border border-outline-variant bg-surface-container-low focus:outline-primary outline-none"
-                      placeholder="your@email.com"
-                      type="email"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-xs">
-                    <label className="text-label-bold text-on-surface-variant font-bold">Phone</label>
-                    <input
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full p-sm rounded border border-outline-variant bg-surface-container-low focus:outline-primary outline-none"
-                      placeholder="(555) 000-0000"
-                      type="tel"
-                    />
-                  </div>
-                  <button
-                    className="bg-primary text-on-primary px-lg py-md rounded-lg font-headline-md transition-transform hover:scale-105 mt-md cursor-pointer font-bold"
-                    type="submit"
-                  >
-                    GET A QUOTE
-                  </button>
-                </form>
-              )}
-            </div>
+            
+            
           </div>
         </div>
       </section>

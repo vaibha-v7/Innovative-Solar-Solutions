@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const faqs = [
   {
@@ -19,6 +20,7 @@ const faqs = [
 ];
 
 export default function ServicesFAQ() {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -55,94 +57,112 @@ export default function ServicesFAQ() {
         </div>
       </section>
 
-      <section className="py-xl bg-surface-container-low border-b border-outline-variant"> <div className="max-w-7xl mx-auto px-margin-desktop"> <div className="mb-lg text-center md:text-left"> <h2 className="font-headline-lg text-headline-lg text-on-surface mb-sm">Core Solar Architectures</h2> <div className="w-24 h-1 bg-primary mb-md" /> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter"> {/* On-Grid System */} <div className="group bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col justify-between"> <div> <div className="mb-md text-primary"><span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: '"FILL" 1' }}>grid_view</span></div> <h3 className="font-headline-md text-headline-md text-on-surface mb-sm">On-grid Systems</h3> <p className="font-body-md text-body-md text-secondary mb-md">Connected to your local power company. You can send extra power back to them and save money on your bills. Best for homes in towns and cities.</p> <ul className="space-y-sm mb-lg"> <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant"><span className="material-symbols-outlined text-primary text-base">check_circle</span> No battery needed</li> <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant"><span className="material-symbols-outlined text-primary text-base">check_circle</span> Lowest cost to start</li> <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant"><span className="material-symbols-outlined text-primary text-base">check_circle</span> Very reliable</li> </ul> </div> <button className="w-full py-sm border-2 border-on-surface text-on-surface font-label-bold text-label-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-colors">Technical Specs</button> </div> {/* Off-Grid System */} <div className="group bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col justify-between"> <div> <div className="mb-md text-primary"><span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: '"FILL" 1' }}>cloud_off</span></div> <h3 className="font-headline-md text-headline-md text-on-surface mb-sm">Off-grid Systems</h3> <p className="font-body-md text-body-md text-secondary mb-md">Works all by itself without the power company. Uses large batteries to keep your lights on at night or when it's cloudy. Best for remote areas.</p> <ul className="space-y-sm mb-lg"> <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant"><span className="material-symbols-outlined text-primary text-base">check_circle</span> Be your own power company</li> <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant"><span className="material-symbols-outlined text-primary text-base">check_circle</span> Includes backup batteries</li> <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant"><span className="material-symbols-outlined text-primary text-base">check_circle</span> Works anywhere</li> </ul> </div> <button className="w-full py-sm border-2 border-on-surface text-on-surface font-label-bold text-label-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-colors">Technical Specs</button> </div> {/* Hybrid System */} <div className="group bg-secondary text-on-secondary p-lg border border-secondary hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between relative overflow-hidden"> <div className="absolute -top-4 -right-4 bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-bold text-caption px-md py-xs rotate-45 z-10"><br /></div> <div> <div className="mb-md text-tertiary-fixed"><span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: '"FILL" 1', transform: 'translateY(0px)' }}>electric_bolt</span></div> <h3 className="font-headline-md text-headline-md mb-sm">Hybrid Systems</h3> <p className="font-body-md text-body-md text-secondary-fixed mb-md">The best of both worlds. It connects to the power company AND has its own batteries. It automatically picks the best power source to make sure you never run out of electricity.</p> <ul className="space-y-sm mb-lg"> <li className="flex items-center gap-xs font-caption text-caption uppercase text-secondary-fixed"><span className="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span> Smart power switching</li> <li className="flex items-center gap-xs font-caption text-caption uppercase text-secondary-fixed"><span className="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span> Works during power cuts</li> <li className="flex items-center gap-xs font-caption text-caption uppercase text-secondary-fixed"><span className="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span> Saves the most money</li> </ul> </div> <button className="w-full py-sm bg-primary text-on-primary font-label-bold text-label-bold uppercase tracking-widest border border-primary hover:bg-on-primary hover:text-primary transition-colors">Technical Specs</button> </div> </div> </div> </section>
-
-      {/* <section className="py-xl bg-white">
-        <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
-          <div className="space-y-md">
-            <h2 className="text-headline-lg font-headline-lg text-inverse-surface">What we do</h2>
-            <p className="text-body-lg font-body-lg text-secondary">
-              We tailor every solar project to your property, usage pattern, and budget. The goal is a system that pays back cleanly and runs reliably.
-            </p>
-            <div className="space-y-sm">
-              {[
-                "Residential rooftop solar",
-                "Commercial rooftop and ground-mount systems",
-                "Agricultural pump and irrigation setups",
-                "On-grid, off-grid, and hybrid configurations",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-sm text-on-surface">
-                  <span className="material-symbols-outlined text-primary">check_circle</span>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+      <section className="py-xl bg-surface-container-low border-b border-outline-variant">
+        <div className="max-w-7xl mx-auto px-margin-desktop">
+          <div className="mb-lg text-center md:text-left">
+            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-sm">Core Solar Architectures</h2>
+            <div className="w-24 h-1 bg-primary mb-md" />
           </div>
-
-          <div id="contact-form" className="bg-surface-container-low border border-outline-variant rounded-xl p-lg shadow-sm space-y-md">
-            <div>
-              <h3 className="text-headline-md font-headline-md text-inverse-surface">Request a callback</h3>
-              <p className="text-body-md text-secondary mt-xs">
-                Send your details and we will respond with the right service recommendation.
-              </p>
-            </div>
-            <form className="space-y-md">
-              <input className="w-full p-md border border-outline-variant rounded bg-white outline-none" placeholder="Full name" type="text" />
-              <input className="w-full p-md border border-outline-variant rounded bg-white outline-none" placeholder="Email address" type="email" />
-              <textarea className="w-full p-md border border-outline-variant rounded bg-white outline-none min-h-32" placeholder="Tell us about your project" />
-              <button className="w-full bg-primary text-on-primary py-md rounded font-label-bold text-label-bold uppercase tracking-widest">
-                Contact us
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            {/* On-Grid System */}
+            <div className="group bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="mb-md text-primary">
+                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: '"FILL" 1' }}>grid_view</span>
+                </div>
+                <h3 className="font-headline-md text-headline-md text-on-surface mb-sm">On-grid Systems</h3>
+                <p className="font-body-md text-body-md text-secondary mb-md">
+                  Connected to your local power company. You can send extra power back to them and save money on your bills. Best for homes in towns and cities.
+                </p>
+                <ul className="space-y-sm mb-lg">
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant">
+                    <span className="material-symbols-outlined text-primary text-base">check_circle</span> No battery needed
+                  </li>
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant">
+                    <span className="material-symbols-outlined text-primary text-base">check_circle</span> Lowest cost to start
+                  </li>
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant">
+                    <span className="material-symbols-outlined text-primary text-base">check_circle</span> Very reliable
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                onClick={() => navigate("/on-grid")}
+                className="w-full py-sm border-2 border-on-surface text-on-surface font-label-bold text-label-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-colors cursor-pointer"
+              >
+                Technical Specs
               </button>
-            </form>
-          </div>
-        </div>
-      </section> */}
+            </div>
 
-      {/* <section className="py-xl bg-inverse-surface text-white">
-        <div className="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
-          <div>
-            <h2 className="text-headline-lg font-headline-lg mb-md">Frequently asked questions</h2>
-            <div className="space-y-sm">
-              {faqs.map((faq, index) => (
-                <button
-                  key={faq.question}
-                  type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`w-full text-left p-md rounded-lg border transition-all ${activeIndex === index
-                      ? "border-primary bg-white/10"
-                      : "border-white/10 bg-white/5 hover:bg-white/10"
-                    }`}
-                >
-                  <div className="flex items-center justify-between gap-md">
-                    <span className="font-headline-md text-headline-md">{faq.question}</span>
-                    <span className="material-symbols-outlined text-primary">{activeIndex === index ? "remove" : "add"}</span>
-                  </div>
-                  {activeIndex === index && <p className="text-body-md text-surface-variant mt-sm">{faq.answer}</p>}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="bg-white text-on-surface rounded-xl p-lg shadow-xl space-y-md">
-            <h3 className="text-headline-md font-headline-md">Why customers choose us</h3>
-            <p className="text-body-md text-secondary">
-              Clear advice, careful engineering, and support after installation. The stitched designs already set the visual direction, so this page keeps that same direct, high-contrast style.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
-              {[
-                ["Fast response", "schedule"],
-                ["Design support", "edit"],
-                ["Installation help", "home_repair_service"],
-                ["Ongoing service", "verified"],
-              ].map(([label, icon]) => (
-                <div key={label} className="p-md bg-surface-container-low rounded-lg border border-outline-variant">
-                  <span className="material-symbols-outlined text-primary">{icon}</span>
-                  <p className="mt-xs font-label-bold text-label-bold uppercase tracking-widest">{label}</p>
+            {/* Off-Grid System */}
+            <div className="group bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className="mb-md text-primary">
+                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: '"FILL" 1' }}>cloud_off</span>
                 </div>
-              ))}
+                <h3 className="font-headline-md text-headline-md text-on-surface mb-sm">Off-grid Systems</h3>
+                <p className="font-body-md text-body-md text-secondary mb-md">
+                  Works all by itself without the power company. Uses large batteries to keep your lights on at night or when it's cloudy. Best for remote areas.
+                </p>
+                <ul className="space-y-sm mb-lg">
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant">
+                    <span className="material-symbols-outlined text-primary text-base">check_circle</span> Be your own power company
+                  </li>
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant">
+                    <span className="material-symbols-outlined text-primary text-base">check_circle</span> Includes backup batteries
+                  </li>
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-on-surface-variant">
+                    <span className="material-symbols-outlined text-primary text-base">check_circle</span> Works anywhere
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                onClick={() => navigate("/off-grid")}
+                className="w-full py-sm border-2 border-on-surface text-on-surface font-label-bold text-label-bold uppercase tracking-widest hover:bg-on-surface hover:text-surface transition-colors cursor-pointer"
+              >
+                Technical Specs
+              </button>
+            </div>
+
+            {/* Hybrid System */}
+            <div className="group bg-secondary text-on-secondary p-lg border border-secondary hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute -top-4 -right-4 bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-bold text-caption px-md py-xs rotate-45 z-10">
+                <br />
+              </div>
+              <div>
+                <div className="mb-md text-tertiary-fixed">
+                  <span className="material-symbols-outlined text-5xl" style={{ fontVariationSettings: '"FILL" 1', transform: "translateY(0px)" }}>electric_bolt</span>
+                </div>
+                <h3 className="font-headline-md text-headline-md mb-sm">Hybrid Systems</h3>
+                <p className="font-body-md text-body-md text-secondary-fixed mb-md">
+                  The best of both worlds. It connects to the power company AND has its own batteries. It automatically picks the best power source to make sure you never run out of electricity.
+                </p>
+                <ul className="space-y-sm mb-lg">
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-secondary-fixed">
+                    <span className="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span> Smart power switching
+                  </li>
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-secondary-fixed">
+                    <span className="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span> Works during power cuts
+                  </li>
+                  <li className="flex items-center gap-xs font-caption text-caption uppercase text-secondary-fixed">
+                    <span className="material-symbols-outlined text-tertiary-fixed text-base">check_circle</span> Saves the most money
+                  </li>
+                </ul>
+              </div>
+              <button
+                type="button"
+                onClick={() => navigate("/hybrid")}
+                className="w-full py-sm bg-primary text-on-primary font-label-bold text-label-bold uppercase tracking-widest border border-primary hover:bg-on-primary hover:text-primary transition-colors cursor-pointer"
+              >
+                Technical Specs
+              </button>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+
 
       <section className="py-xl bg-surface">
             <div className="max-w-4xl mx-auto px-margin-desktop">

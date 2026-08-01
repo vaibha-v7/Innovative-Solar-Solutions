@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CommercialSolar() {
+  const navigate = useNavigate();
   const [quoteSubmitted, setQuoteSubmitted] = useState(false);
   const [formData, setFormData] = useState({ fullName: "", email: "", phone: "" });
 
@@ -67,11 +69,9 @@ export default function CommercialSolar() {
               </ul>
               <div className="flex gap-4">
                 <button
-                  onClick={() => {
-                    const element = document.getElementById("commercial-benefits");
-                    if (element) element.scrollIntoView({ behavior: "smooth" });
-                  }}
-                  className="bg-primary text-on-primary px-8 py-4 font-headline-md text-label-bold uppercase rounded-lg hover:bg-on-primary-fixed-variant transition-colors cursor-pointer"
+                  type="button"
+                  onClick={() => navigate({ pathname: "/", hash: "#contact-section" })}
+                  className="bg-primary text-on-primary px-lg py-base text-headline-md font-headline-md rounded hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-sm cursor-pointer"
                 >
                   Learn More
                 </button>
@@ -79,68 +79,7 @@ export default function CommercialSolar() {
             </div>
 
             {/* Quote Form */}
-            <div className="bg-white p-8 rounded-lg shadow-2xl text-left border border-outline-variant mt-8 md:mt-0">
-              <h3 className="text-headline-md font-headline-md text-on-surface mb-6 uppercase font-bold">
-                Get a Free Quote
-              </h3>
-              {quoteSubmitted ? (
-                <div className="p-md bg-green-50 text-green-800 rounded-md border border-green-200">
-                  <p className="font-bold">Commercial Feasibility Request Submitted!</p>
-                  <p className="text-sm mt-1">Our engineering office will prepare a high-level solar projection and payback analysis for your business.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block font-label-bold text-caption uppercase text-on-surface-variant mb-1 font-bold">
-                      Full Name
-                    </label>
-                    <input
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full border border-outline-variant p-3 rounded focus:border-primary focus:ring-0 outline-none bg-white text-on-surface"
-                      placeholder="Your Name"
-                      type="text"
-                    />
-                  </div>
-                  <div>
-                    <label className="block font-label-bold text-caption uppercase text-on-surface-variant mb-1 font-bold">
-                      Email Address
-                    </label>
-                    <input
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full border border-outline-variant p-3 rounded focus:border-primary focus:ring-0 outline-none bg-white text-on-surface"
-                      placeholder="email@company.com"
-                      type="email"
-                    />
-                  </div>
-                  <div>
-                    <label className="block font-label-bold text-caption uppercase text-on-surface-variant mb-1 font-bold">
-                      Phone Number
-                    </label>
-                    <input
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full border border-outline-variant p-3 rounded focus:border-primary focus:ring-0 outline-none bg-white text-on-surface"
-                      placeholder="(555) 000-0000"
-                      type="tel"
-                    />
-                  </div>
-                  <button
-                    className="w-full bg-primary text-white py-4 font-headline-md text-label-bold uppercase tracking-widest rounded hover:bg-on-primary-fixed-variant transition-colors cursor-pointer font-bold"
-                    type="submit"
-                  >
-                    Get a quote
-                  </button>
-                </form>
-              )}
-            </div>
+            
           </div>
         </div>
       </section>

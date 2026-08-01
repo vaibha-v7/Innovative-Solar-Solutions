@@ -1,6 +1,7 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function HybridSystems() {
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [booked, setBooked] = useState(false);
   const [bookingForm, setBookingForm] = useState({ name: "", email: "", date: "" });
@@ -108,7 +109,8 @@ export default function HybridSystems() {
               </p>
             </div>
             <button
-              onClick={() => setModalOpen(true)}
+              type="button"
+              onClick={() => navigate("/#contact-section")}
               className="bg-primary text-on-primary font-label-bold px-lg py-sm rounded uppercase tracking-widest hover:bg-primary-container active:scale-95 transition-all whitespace-nowrap cursor-pointer"
             >
               Consult an Engineer

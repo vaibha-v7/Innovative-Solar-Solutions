@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function OnGridSystems() {
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [booked, setBooked] = useState(false);
   const [bookingForm, setBookingForm] = useState({ name: "", email: "", date: "" });
@@ -114,7 +116,8 @@ export default function OnGridSystems() {
             </p>
           </div>
           <button
-            onClick={() => setModalOpen(true)}
+            type="button"
+            onClick={() => navigate("/#contact-section")}
             className="bg-primary text-on-primary font-label-bold text-label-bold px-lg py-md uppercase tracking-widest hover:bg-primary-container active:scale-95 duration-150 rounded transition-all whitespace-nowrap cursor-pointer"
           >
             Consult an Engineer

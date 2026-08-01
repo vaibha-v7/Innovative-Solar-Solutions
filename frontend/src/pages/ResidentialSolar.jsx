@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ResidentialSolar() {
+  const navigate = useNavigate();
   const [quoteSubmitted, setQuoteSubmitted] = useState(false);
   const [formData, setFormData] = useState({ fullName: "", email: "", phone: "" });
 
@@ -57,11 +59,8 @@ export default function ResidentialSolar() {
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-gutter">
-                <button
-                  onClick={() => {
-                    const element = document.getElementById("benefits-grid");
-                    if (element) element.scrollIntoView({ behavior: "smooth" });
-                  }}
+                <button type="button"
+                  onClick={() => navigate("/#contact-section")}
                   className="bg-primary text-on-primary px-lg py-base text-headline-md font-headline-md rounded hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-sm cursor-pointer"
                 >
                   Learn More
@@ -70,70 +69,7 @@ export default function ResidentialSolar() {
             </div>
 
             {/* Free Quote Card */}
-            <div className="md:col-span-5 text-left mt-8 md:mt-0">
-              <div className="bg-white p-lg rounded-lg shadow-xl border border-outline-variant">
-                <h3 className="text-headline-md font-headline-md text-on-surface mb-md font-bold uppercase">
-                  GET A FREE QUOTE
-                </h3>
-                {quoteSubmitted ? (
-                  <div className="p-md bg-green-50 text-green-800 rounded-md border border-green-200">
-                    <p className="font-bold">Quote Request Received!</p>
-                    <p className="text-sm mt-1">Our solar specialist will review your property and call you back in 24 hours.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-base">
-                    <div className="space-y-xs">
-                      <label className="text-caption font-label-bold uppercase text-on-surface-variant block">
-                        Full Name
-                      </label>
-                      <input
-                        name="fullName"
-                        value={formData.fullName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full p-base border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none"
-                        placeholder="John Doe"
-                        type="text"
-                      />
-                    </div>
-                    <div className="space-y-xs">
-                      <label className="text-caption font-label-bold uppercase text-on-surface-variant block">
-                        Email Address
-                      </label>
-                      <input
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full p-base border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none"
-                        placeholder="john@example.com"
-                        type="email"
-                      />
-                    </div>
-                    <div className="space-y-xs">
-                      <label className="text-caption font-label-bold uppercase text-on-surface-variant block">
-                        Phone Number
-                      </label>
-                      <input
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full p-base border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none"
-                        placeholder="(555) 000-0000"
-                        type="tel"
-                      />
-                    </div>
-                    <button
-                      className="w-full bg-primary text-on-primary py-md rounded font-headline-md hover:opacity-90 active:scale-95 transition-all mt-md cursor-pointer font-bold uppercase tracking-wider"
-                      type="submit"
-                    >
-                      GET A QUOTE
-                    </button>
-                  </form>
-                )}
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>

@@ -18,15 +18,35 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    let cancelled = false;
+    let attempts = 0;
+    const maxAttempts = 20;
+
+    const scrollToHash = () => {
+      if (cancelled) return;
+
       const element = document.querySelector(hash);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
-    }
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+      if (attempts < maxAttempts) {
+        attempts += 1;
+        requestAnimationFrame(scrollToHash);
+      }
+    };
+
+    scrollToHash();
+
+    return () => {
+      cancelled = true;
+    };
   }, [pathname, hash]);
 
   return null;
