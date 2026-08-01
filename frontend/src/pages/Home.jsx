@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ fullName: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    address: "",
+    pincode: "",
+  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -12,11 +18,11 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.fullName && formData.email) {
+    if (formData.fullName && formData.email && formData.phone && formData.address && formData.pincode) {
       setFormSubmitted(true);
       setTimeout(() => {
         setFormSubmitted(false);
-        setFormData({ fullName: "", email: "", message: "" });
+        setFormData({ fullName: "", email: "", phone: "", address: "", pincode: "" });
       }, 5000);
     }
   };
@@ -365,17 +371,52 @@ export default function Home() {
                     />
                   </div>
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
+                  <div className="space-y-xs">
+                    <label className="text-label-bold font-label-bold text-inverse-surface uppercase tracking-wider block">
+                      Phone Number
+                    </label>
+                    <input
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none"
+                      placeholder="+91"
+                      type="tel"
+                    />
+                  </div>
+                  <div className="space-y-xs">
+                    <label className="text-label-bold font-label-bold text-inverse-surface uppercase tracking-wider block">
+                      Pincode
+                    </label>
+                    <input
+                      name="pincode"
+                      value={formData.pincode}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none"
+                      placeholder="226001"
+                      type="text"
+                      inputMode="numeric"
+                      maxLength={6}
+                      pattern="[0-9]{6}"
+                      title="Please enter a valid 6-digit pincode"
+                    />
+                  </div>
+                </div>
                 <div className="space-y-xs">
                   <label className="text-label-bold font-label-bold text-inverse-surface uppercase tracking-wider block">
-                    Message
+                    Address
                   </label>
                   <textarea
-                    name="message"
-                    value={formData.message}
+                    name="address"
+                    value={formData.address}
                     onChange={handleInputChange}
+                    required
                     className="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none"
-                    placeholder="How can we help you?"
-                    rows="4"
+                    placeholder="Street, city, state"
+                    rows="3"
                   ></textarea>
                 </div>
                 <button
