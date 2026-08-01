@@ -141,7 +141,6 @@ export default function Blog() {
             </p>
           </div>
           <div className="space-y-md">
-            {/* Search */}
             <input
               type="search"
               placeholder="Search articles..."
@@ -149,7 +148,6 @@ export default function Blog() {
               onChange={handleSearch}
               className="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none rounded-xl text-body-md text-on-surface placeholder:text-secondary"
             />
-            {/* Category filter chips */}
             <div className="flex flex-wrap gap-xs">
               {CATEGORIES.map((cat) => (
                 <button
@@ -173,7 +171,6 @@ export default function Blog() {
                 </button>
               )}
             </div>
-            {/* Articles grid */}
             <div className="grid gap-md">
               {paginatedArticles.length > 0 ? (
                 paginatedArticles.map((article) => (
@@ -202,7 +199,6 @@ export default function Blog() {
                 <p className="text-body-md text-secondary py-lg text-center">No articles match your search.</p>
               )}
             </div>
-            {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex items-center justify-between pt-sm">
                 <button
@@ -243,8 +239,6 @@ export default function Blog() {
           ))}
         </div>
       </section>
-
-
     </div>
   );
 }
