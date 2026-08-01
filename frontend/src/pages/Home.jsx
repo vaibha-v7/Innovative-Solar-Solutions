@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const position = [26.85237054932443, 80.92761561021176];
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -464,7 +467,7 @@ export default function Home() {
             </div>
 
             {/* Schematic Map illustration */}
-            <div className="relative aspect-video overflow-hidden border border-outline-variant">
+            {/* <div className="relative aspect-video overflow-hidden border border-outline-variant">
               <div className="absolute inset-0 bg-surface-container-highest opacity-20"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative">
@@ -487,7 +490,30 @@ export default function Home() {
                 <path d="M0 150 Q 200 100 400 200 T 800 150" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5"></path>
                 <path d="M100 0 Q 150 200 50 450" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5"></path>
               </svg>
-            </div>
+            </div> */}
+
+<div className="relative z-0 w-full aspect-video rounded-xl overflow-hidden">
+
+<div className="w-full aspect-video rounded-xl  overflow-hidden border border-outline-variant shadow-sm">
+  <MapContainer
+    center={position}
+    zoom={13}
+    scrollWheelZoom={false}
+    className="w-full h-full"
+  >
+    <TileLayer
+      attribution="© OpenStreetMap contributors"
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+
+    <Marker position={position}>
+      <Popup>Lucknow Office</Popup>
+    </Marker>
+  </MapContainer>
+</div>
+
+</div>
+
           </div>
         </div>
       </section>
