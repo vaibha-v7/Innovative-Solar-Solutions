@@ -14,8 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 const customerRoutes = require("./routes/customer.routes");
+const getcustomerRoutes = require("./routes/customer.routes");
 
 app.use("/api/customers", customerRoutes);
+app.use("/api/customers", getcustomerRoutes);
 
 
 app.get("/", (req, res) => {

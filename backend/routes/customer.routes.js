@@ -2,8 +2,12 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  createCustomer,
+  createCustomer,getAllCustomers
 } = require("../controllers/customer.controller");
+
+
+
+router.get("/", getAllCustomers);
 
 router.post("/", createCustomer);
 
