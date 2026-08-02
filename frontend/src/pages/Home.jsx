@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
+import { createCustomer } from "../services/customer.service";
+import { sendOwnerEmail } from "../services/email.service";
+
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const position = [26.85237054932443, 80.92761561021176];
@@ -19,16 +22,34 @@ export default function Home() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.fullName && formData.email && formData.phone && formData.address && formData.pincode) {
-      setFormSubmitted(true);
-      setTimeout(() => {
-        setFormSubmitted(false);
-        setFormData({ fullName: "", email: "", phone: "", address: "", pincode: "" });
-      }, 5000);
-    }
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    await createCustomer(formData);
+
+    await sendOwnerEmail(formData);
+
+    setFormSubmitted(true);
+
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      address: "",
+      pincode: "",
+    });
+
+    setTimeout(() => {
+      setFormSubmitted(false);
+    }, 5000);
+
+  } catch (error) {
+    console.error(error);
+
+    alert("Something went wrong.");
+  }
+};
 
   return (
     <div className="bg-background text-on-background min-h-screen">
