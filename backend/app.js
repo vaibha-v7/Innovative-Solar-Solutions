@@ -15,9 +15,11 @@ app.use(express.json());
 
 const customerRoutes = require("./routes/customer.routes");
 const getcustomerRoutes = require("./routes/customer.routes");
+const adminRoutes = require("./routes/admin.routes");
 
 app.use("/api/customers", customerRoutes);
 app.use("/api/customers", getcustomerRoutes);
+app.use("/api/admin", adminRoutes);
 
 
 app.get("/", (req, res) => {

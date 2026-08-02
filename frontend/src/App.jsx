@@ -13,6 +13,9 @@ import ServicesFAQ from "./pages/ServicesFAQ";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Blog from "./pages/Blog";
 import "./App.css";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import ProtectedAdminRoute from "./components/ProtectedAdminRoute";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -148,6 +151,18 @@ function App() {
           }
         />
         <Route path="*" element={<Navigate to="/" replace />} />
+
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedAdminRoute>
+              <AdminDashboard />
+            </ProtectedAdminRoute>
+          }
+        />
+
+
       </Routes>
     </>
   );

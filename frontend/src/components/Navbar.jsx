@@ -60,7 +60,6 @@ export default function Navbar() {
               setActiveDropdown("offerings");
             }}
             onMouseLeave={() => {
-              // Delay hiding so small mouse slips don't immediately close the menu
               leaveTimeout.current = setTimeout(() => { setActiveDropdown(null); leaveTimeout.current = null; }, 200);
             }}
           >
@@ -161,7 +160,27 @@ export default function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4">
+
+          {/* Admin Login - icon link, low visual weight so it doesn't compete with CTAs */}
+          <NavLink
+            to="/admin/login"
+            className="hidden md:flex items-center gap-1.5 text-sm font-semibold text-gray-500 hover:text-primary transition-all duration-300"
+            title="Admin Login"
+          >
+            <span className="material-symbols-outlined text-[20px]">
+              admin_panel_settings
+            </span>
+            Admin
+          </NavLink>
+
+          {/* Partner With Us - secondary/outline button, matches primary theme */}
+          <NavLink
+            to="/partner-with-us"
+            className="hidden md:block rounded-lg border-2 border-primary px-6 py-[10px] text-sm font-semibold uppercase tracking-wide text-primary transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary hover:text-white active:scale-95"
+          >
+            Partner With Us
+          </NavLink>
 
           <button
             onClick={() => navigate("/#contact-section")}
@@ -235,6 +254,22 @@ export default function Navbar() {
               onClick={handleLinkClick}
             >
               Blog
+            </NavLink>
+
+            <NavLink
+              to="/partner-with-us"
+              className={mobileNavLinkClass}
+              onClick={handleLinkClick}
+            >
+              Partner With Us
+            </NavLink>
+
+            <NavLink
+              to="/admin/login"
+              className={mobileNavLinkClass}
+              onClick={handleLinkClick}
+            >
+              Admin Login
             </NavLink>
 
             <button
