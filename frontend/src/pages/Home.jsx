@@ -292,9 +292,9 @@ const handleSubmit = async (e) => {
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 border-l-4 border-t-4 border-primary/30"></div>
             <div
-              className="aspect-square bg-cover bg-center border-4 border-primary"
+              className="aspect-square bg-cover bg-right border-4 border-primary"
               style={{
-                backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQyAGB02DINhcu-6wMxl8mMRmcMYa6CgVOOcq8CPYMB-ZO0WJ8TciXD79NVIv_zWt_1bLJuSW1juWMwYaMc4oJny23g-J9q2AeqGczsMvVcoTJ2G05zr5WWOLVqm3ImhaHn-H1yWJV3HOITzjFjYOBMxbJtGTwl9Ie6tSyKKLGH5iUcerZP0CPzdzVs8p4tUADXcgtpm4PkKjBwwiNslaC50D42XdIAJ3qqj9pux8Z9qIVPp30A-E9")`,
+                backgroundImage: `url("https://img.magnific.com/premium-photo/black-man-electrician-solar-panels-installation-rooftop-sustainable-energy-with-eco-friendly-technology-maintenance-tools-male-engineering-with-infrastructure-power-from-sun_590464-165444.jpg?semt=ais_hybrid&w=740&q=80")`,
               }}
             ></div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-md">
@@ -552,11 +552,16 @@ const handleSubmit = async (e) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-md">
             {/* Maintenance Card */}
-            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer">
+            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer" onClick={() =>
+              window.open(
+                "https://youtube.com/shorts/d158enOisE4?si=J8oxnYd_D_58mf4-",
+                "_blank"
+              )
+            }>
               <img
                 alt="Maintenance"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGMX1WeOCDPQr_657FN2eo7r7E1zpzA7FM_VyEDQPG0XRrvAP0On4NG8S-6fFiBGyBlyyKn9cPYCE7NcEIYz9r8DYgYk3kGrdsaRm3M5Wtvc8JzNum845IL4Wy2cvRlbNwa4Mm6v49oPcD0GW08-k4aJ9Uw_jqxi3yKVH3BCPDoVWEa4J9De8qSvWuNfAPYpd6PP1TfbM_f_uhacgDtTUzo9JO0l5KwbMwRjjwmGqJP3yksXv4Wx1G"
+                src="https://media.istockphoto.com/id/2218657775/photo/close-up-of-worker-cleaning-photovoltaic-panel-system.webp?a=1&b=1&s=612x612&w=0&k=20&c=ssOhJbMdRDu_gGPAKD18rm5t4vxoRbc2B3VaFnr6KYM="
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">
@@ -575,11 +580,16 @@ const handleSubmit = async (e) => {
             </div>
 
             {/* Products Card */}
-            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer">
+            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer" onClick={() =>
+              window.open(
+                "https://youtu.be/rn6hJnJxb-4?si=n9Sm5FWFt4-Nbq5-",
+                "_blank"
+              )
+            }>
               <img
                 alt="Products"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVPOKaKH4r18cRc2Kj6C7vH0lxHz92P8Ht0lHyxkKvdC28M3rjXeIaEg3Djwp5fTHJRuQDiGoQrprrxwUnx42Ci4wWlGnN2iJAk8fSTTyS2WopOgHtHcQSoaro8Bu5qA4wE026aq2aqpvaQXRgv9oq6gyJFItTlR5wK5iC3MN7ek_di-XZ8_rw4t0JAUtBfdRfRPGVj7Aev7QqMwp9DldJto8ptiG5QeaEjZT8Ny3QAkuzMEdeMhZH"
+                src="https://images.unsplash.com/photo-1661997608910-da43d46039a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c29sYXIlMjBwYW5lbCUyMGJhdHRlcnl8ZW58MHx8MHx8fDA%3D"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">
@@ -598,11 +608,16 @@ const handleSubmit = async (e) => {
             </div>
 
             {/* Tutorial Card */}
-            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer">
+            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer" onClick={() =>
+              window.open(
+                "https://youtu.be/uORFle0uty4?si=PB8YCsfPLHCW6CjN",
+                "_blank"
+              )
+            }>
               <img
                 alt="Tutorial"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuByKfVz_f02vbBx2Yn3S39iYBf8gH55nGdi9W_-_EB5yYY1G-cdxCj_IP_0bg3oCFRxWT47kBMjQ6AnriqE8FAnXoN9bqFDoyPkHqpGBMnZ2na_rHQwpxPL2KKuNjkMg2gyPEqjDkOtn7y6PKylzm7Y-fxBFeNKsFsMlib3uBsm7vqeqreNu_AewbmApoXCzxOdHtJkc1LcDsA7T0-uHG_7865KdRBfDshBtQURZOqXII6-3j_ABZUH"
+                src="https://media.istockphoto.com/id/1320775518/photo/solar-reverse.webp?a=1&b=1&s=612x612&w=0&k=20&c=tInS_lZukGgKmg_0lBvK5HRmQi_l0XjGs7T5D9_SRh8="
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">
@@ -621,34 +636,54 @@ const handleSubmit = async (e) => {
             </div>
 
             {/* Efficiency Card */}
-            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer">
-              <img
-                alt="Efficiency"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxojtQ9I-2VVJD9NOLGu0a-_TLrJFJcOceGEfWgN392FUVYjTmdx62DZkqQzv7VI1D_UvtPnAXtSOfUwaG0caW_Hsl-4OBYW9xQ27pu39JZ6SiwY5knpF5MxsKAhYTpel6CB5lgdfcGsl9sxvtFo1q08q2DOkTFTijLQo1ViqlVEEgWKMVdZ9qzuV3RovfoBmMaSZis-b4h3673tjyQxU-VwiT-Duo6gIEyfWs_Y7TQAsZIX2sIcAn"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div className="absolute top-4 right-4">
-                <div className="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-white text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                    play_arrow
-                  </span>
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 text-left">
-                <p className="text-primary-container font-label-bold text-caption uppercase mb-1">Efficiency</p>
-                <h3 className="text-white font-bold text-body-md leading-tight">
-                  Why tracking panels work better
-                </h3>
-              </div>
-            </div>
+<div className="relative aspect-[3/4] overflow-hidden group cursor-pointer"
+  onClick={() =>
+    window.open(
+      "https://youtu.be/nnNtXh4U7vA?si=OA56iJjbBYQZLoDq",
+      "_blank"
+    )
+  }
+>
+  <img
+    alt="Efficiency"
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxojtQ9I-2VVJD9NOLGu0a-_TLrJFJcOceGEfWgN392FUVYjTmdx62DZkqQzv7VI1D_UvtPnAXtSOfUwaG0caW_Hsl-4OBYW9xQ27pu39JZ6SiwY5knpF5MxsKAhYTpel6CB5lgdfcGsl9sxvtFo1q08q2DOkTFTijLQo1ViqlVEEgWKMVdZ9qzuV3RovfoBmMaSZis-b4h3673tjyQxU-VwiT-Duo6gIEyfWs_Y7TQAsZIX2sIcAn"
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+
+  <div className="absolute top-4 right-4">
+    <div className="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+      <span
+        className="material-symbols-outlined text-white text-[20px]"
+        style={{ fontVariationSettings: "'FILL' 1" }}
+      >
+        play_arrow
+      </span>
+    </div>
+  </div>
+
+  <div className="absolute bottom-4 left-4 right-4 text-left">
+    <p className="text-primary-container font-label-bold text-caption uppercase mb-1">
+      Efficiency
+    </p>
+    <h3 className="text-white font-bold text-body-md leading-tight">
+      Why tracking panels work better
+    </h3>
+  </div>
+</div>
 
             {/* Weather Card */}
-            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer">
+            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer" onClick={() =>
+              window.open(
+                "https://youtube.com/shorts/OPQ9gfK5vU8?si=xDZGSPiQ1tth3zW8",
+                "_blank"
+              )
+            }>
               <img
                 alt="Weather"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH52EIKSEqqzIQUpQ-tsa2FUklK5DHDw83knTm0kSaCyAL-08kEZqjn1G22i3SeqimH_Z_i0Z7hYO9VApdKBG-MsJjLP9YXuxq5VyPit6yMU6Ilt8mSDxHekfwWVDpsjWHSDVafCyE-l_B46XbCzMSnmVkJVwMXIZSe8g2JkVY03fEJ6JPXV4zOt3Bbhu4C71N9wWnbIMXzb-qWPeLli7VlNJlGu3e93nvXc_NiBJfAZVDC-qOAF5J"
+                src="https://images.unsplash.com/photo-1724041875463-ba0a3f2fc68c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFpbiUyMG9uJTIwc29sYXIlMjBwYW5uZWx8ZW58MHx8MHx8fDA%3D"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">
