@@ -30,7 +30,7 @@ export default function AgriculturalSolar() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuA8sQOnlAVsWss-J7ynM2qb01iii7Naxq-fHHp2Mv9KZA2K5N6dvsAjq-JDk1OPxa30uhqu2WMMBHHQRISNqil_CuMnaR5RxLpEilwvrGNoc-hjZ_8AT3NqAvuHD3K1W7Rom_aGAou-rEMCSGYorU3ok-j4MXRLlky_AMhm37ZmWKh1BIqISjAmAg8AVo0vlILsKkg9zayhjO8x8gz1TyFw6N7n8frLqTt9xm69UW6N-okhnndKeZA7")`,
+              backgroundImage: `url("https://res.cloudinary.com/hdiglobal/image/upload/f_auto,dpr_auto,q_auto,fl_progressive/w_5070,h_3169,x_0,y_5,c_crop/productioncms12/episerver/dda6c063-57ed-4b0c-a9ec-e5acd1ce29da/05_agrivoltaics_web.jpg")`,
               filter: "brightness(0.5)",
             }}
           ></div>

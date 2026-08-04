@@ -22,34 +22,34 @@ export default function Home() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    await createCustomer(formData);
+    try {
+      await createCustomer(formData);
 
-    await sendOwnerEmail(formData);
+      await sendOwnerEmail(formData);
 
-    setFormSubmitted(true);
+      setFormSubmitted(true);
 
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      address: "",
-      pincode: "",
-    });
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        address: "",
+        pincode: "",
+      });
 
-    setTimeout(() => {
-      setFormSubmitted(false);
-    }, 5000);
+      setTimeout(() => {
+        setFormSubmitted(false);
+      }, 5000);
 
-  } catch (error) {
-    console.error(error);
+    } catch (error) {
+      console.error(error);
 
-    alert("Something went wrong.");
-  }
-};
+      alert("Something went wrong.");
+    }
+  };
 
   return (
     <div className="bg-background text-on-background min-h-screen">
@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
             }}
           ></div>
         </div>
-        
+
         <div className="relative z-20 max-w-7xl mx-auto px-margin-desktop w-full grid md:grid-cols-2 gap-lg items-center">
           <div className="space-y-md">
             <div className="inline-flex items-center bg-primary/20 border border-primary/30 px-3 py-1 text-primary-fixed-dim font-label-bold text-caption uppercase tracking-widest">
@@ -465,7 +465,7 @@ const handleSubmit = async (e) => {
                   <p className="text-body-md font-body-md text-secondary">+91 70073 45031</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-md">
                 <div className="bg-primary/10 p-sm text-primary rounded-DEFAULT flex items-center justify-center">
                   <span className="material-symbols-outlined">mail</span>
@@ -513,27 +513,27 @@ const handleSubmit = async (e) => {
               </svg>
             </div> */}
 
-<div className="relative z-0 w-full aspect-video rounded-xl overflow-hidden">
+            <div className="relative z-0 w-full aspect-video rounded-xl overflow-hidden">
 
-<div className="w-full aspect-video rounded-xl  overflow-hidden border border-outline-variant shadow-sm">
-  <MapContainer
-    center={position}
-    zoom={13}
-    scrollWheelZoom={false}
-    className="w-full h-full"
-  >
-    <TileLayer
-      attribution="© OpenStreetMap contributors"
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
+              <div className="w-full aspect-video rounded-xl  overflow-hidden border border-outline-variant shadow-sm">
+                <MapContainer
+                  center={position}
+                  zoom={13}
+                  scrollWheelZoom={false}
+                  className="w-full h-full"
+                >
+                  <TileLayer
+                    attribution="© OpenStreetMap contributors"
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  />
 
-    <Marker position={position}>
-      <Popup>Lucknow Office</Popup>
-    </Marker>
-  </MapContainer>
-</div>
+                  <Marker position={position}>
+                    <Popup>Lucknow Office</Popup>
+                  </Marker>
+                </MapContainer>
+              </div>
 
-</div>
+            </div>
 
           </div>
         </div>
@@ -551,6 +551,7 @@ const handleSubmit = async (e) => {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-md">
+            
             {/* Maintenance Card */}
             <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer" onClick={() =>
               window.open(
@@ -636,42 +637,42 @@ const handleSubmit = async (e) => {
             </div>
 
             {/* Efficiency Card */}
-<div className="relative aspect-[3/4] overflow-hidden group cursor-pointer"
-  onClick={() =>
-    window.open(
-      "https://youtu.be/nnNtXh4U7vA?si=OA56iJjbBYQZLoDq",
-      "_blank"
-    )
-  }
->
-  <img
-    alt="Efficiency"
-    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxojtQ9I-2VVJD9NOLGu0a-_TLrJFJcOceGEfWgN392FUVYjTmdx62DZkqQzv7VI1D_UvtPnAXtSOfUwaG0caW_Hsl-4OBYW9xQ27pu39JZ6SiwY5knpF5MxsKAhYTpel6CB5lgdfcGsl9sxvtFo1q08q2DOkTFTijLQo1ViqlVEEgWKMVdZ9qzuV3RovfoBmMaSZis-b4h3673tjyQxU-VwiT-Duo6gIEyfWs_Y7TQAsZIX2sIcAn"
-  />
+            <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://youtu.be/nnNtXh4U7vA?si=OA56iJjbBYQZLoDq",
+                  "_blank"
+                )
+              }
+            >
+              <img
+                alt="Efficiency"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxojtQ9I-2VVJD9NOLGu0a-_TLrJFJcOceGEfWgN392FUVYjTmdx62DZkqQzv7VI1D_UvtPnAXtSOfUwaG0caW_Hsl-4OBYW9xQ27pu39JZ6SiwY5knpF5MxsKAhYTpel6CB5lgdfcGsl9sxvtFo1q08q2DOkTFTijLQo1ViqlVEEgWKMVdZ9qzuV3RovfoBmMaSZis-b4h3673tjyQxU-VwiT-Duo6gIEyfWs_Y7TQAsZIX2sIcAn"
+              />
 
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 
-  <div className="absolute top-4 right-4">
-    <div className="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-      <span
-        className="material-symbols-outlined text-white text-[20px]"
-        style={{ fontVariationSettings: "'FILL' 1" }}
-      >
-        play_arrow
-      </span>
-    </div>
-  </div>
+              <div className="absolute top-4 right-4">
+                <div className="bg-primary rounded-full p-2 flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
+                  <span
+                    className="material-symbols-outlined text-white text-[20px]"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    play_arrow
+                  </span>
+                </div>
+              </div>
 
-  <div className="absolute bottom-4 left-4 right-4 text-left">
-    <p className="text-primary-container font-label-bold text-caption uppercase mb-1">
-      Efficiency
-    </p>
-    <h3 className="text-white font-bold text-body-md leading-tight">
-      Why tracking panels work better
-    </h3>
-  </div>
-</div>
+              <div className="absolute bottom-4 left-4 right-4 text-left">
+                <p className="text-primary-container font-label-bold text-caption uppercase mb-1">
+                  Efficiency
+                </p>
+                <h3 className="text-white font-bold text-body-md leading-tight">
+                  Why tracking panels work better
+                </h3>
+              </div>
+            </div>
 
             {/* Weather Card */}
             <div className="relative aspect-[3/4] overflow-hidden group cursor-pointer" onClick={() =>

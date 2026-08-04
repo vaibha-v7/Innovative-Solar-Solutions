@@ -30,7 +30,7 @@ export default function CommercialSolar() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2SXHsk5lI6o47FQyOVwFTBSytYEA49WW1uHR0IGMz0IwSigFXIwX-JA0s6xFnoTEWTmqDTJiTJyMQzrwyeZV7wjMYfV4oC_OOjZDReFbrZrRGASSCStu06TjE_HGrn8arJIlOoHOHYuKfItsFx_NNxzPBnnnh1ciwJGUliL3Ug_9lptmQLU6PaWq_GxUs70BHkXRsAnS8dftwE8jAFhra0mOcTbuO-GtbUUonvp-nTGEZR-do7cg-")`,
+              backgroundImage: `url(https://i0.wp.com/www.ecomena.org/wp-content/uploads/2018/01/solar-project-abu-dhabi.jpg)`,
               filter: "brightness(0.6)"
             }}
           ></div>

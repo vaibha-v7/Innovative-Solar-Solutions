@@ -31,7 +31,7 @@ export default function HybridSystems() {
           <img
             alt="Modern luxury home with solar panels"
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida/AP1WRLt5XSYysMlcRD4zgoRvxz8YQR5Xo6SyAZSO7Vo7Q_rvL7u75We2l4_N8I3vVzdDzMOnUTyqTCQY5R4vwb4n9bOAPSm0e3QI3sQ7JEJewTyVIVpBzFDjpSC-pQzcCCn9DXU3OvF7RN0ydU5m9ml2RvKegrFwGQ3oN0ARsBnpNo2ROxM_9ZJzTLX1EbddJNfKPc-68DJHJE8hFIgTXwmzFY96S5-jlVP72HB562JJgLh4akMeZs3R7RmNekk"
+            src="https://sunapecopower.com/wp-content/uploads/2026/03/What-Makes-a-Hybrid-System.png?wsr"
           />
           <div className="absolute inset-0 bg-black/35"></div>
         </div>
