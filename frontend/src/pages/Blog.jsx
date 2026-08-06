@@ -128,8 +128,9 @@ export default function Blog() {
     <div className="bg-background text-on-background min-h-screen">
       <section className="relative overflow-hidden bg-surface py-xl">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(187,0,19,0.18),_transparent_35%),linear-gradient(180deg,rgba(0,0,0,0.02),transparent)]" />
-        <div className="max-w-7xl mx-auto px-4 lg:px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
-          <div className="space-y-md">
+        <div className="max-w-7xl mx-auto px-4 lg:px-margin-desktop relative z-10 space-y-xl">
+          {/* Heading */}
+          <div className="max-w-3xl space-y-md">
             <span className="inline-flex items-center gap-xs bg-primary text-on-primary px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest">
               Solar Insights
             </span>
@@ -140,14 +141,9 @@ export default function Blog() {
               A stitched-style content hub for customers who want to learn before they buy. This keeps the Blog route connected and useful.
             </p>
           </div>
-          <div className="space-y-md">
-            <input
-              type="search"
-              placeholder="Search articles..."
-              value={searchQuery}
-              onChange={handleSearch}
-              className="w-full p-md border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary bg-white outline-none rounded-xl text-body-md text-on-surface placeholder:text-secondary"
-            />
+
+          {/* Search + filters */}
+          <div className="flex flex-col lg:flex-row lg:items-center gap-md">
             <div className="flex flex-wrap gap-xs">
               {CATEGORIES.map((cat) => (
                 <button
@@ -171,54 +167,63 @@ export default function Blog() {
                 </button>
               )}
             </div>
-            <div className="grid gap-md">
-              {paginatedArticles.length > 0 ? (
-                paginatedArticles.map((article) => (
+          </div>
+
+          {/* Articles grid */}
+          {paginatedArticles.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+              {paginatedArticles.map((article) => {
+                const isExpanded = expandedTitle === article.title;
+                return (
                   <article
                     key={article.title}
-                    className="bg-white rounded-xl border border-outline-variant p-lg shadow-sm cursor-pointer hover:shadow-md transition-shadow"
-                    onClick={() => setExpandedTitle(expandedTitle === article.title ? null : article.title)}
+                    className={`bg-white rounded-xl border border-outline-variant p-lg shadow-sm cursor-pointer hover:shadow-md transition-shadow flex flex-col ${
+                      isExpanded ? "sm:col-span-2 lg:col-span-3" : ""
+                    }`}
+                    onClick={() => setExpandedTitle(isExpanded ? null : article.title)}
                   >
                     <p className="text-caption font-label-bold uppercase tracking-widest text-primary">{article.category}</p>
                     <h2 className="mt-xs text-headline-md font-headline-md text-inverse-surface">{article.title}</h2>
-                    <p className="mt-sm text-body-md text-secondary">{article.summary}</p>
+                    <p className="mt-sm text-body-md text-secondary flex-1">{article.summary}</p>
                     <div className="mt-sm flex items-center justify-between flex-wrap gap-xs">
                       <span className="text-caption text-secondary">{article.date} · {article.readTime}</span>
                       <span className="text-caption font-label-bold text-primary uppercase tracking-widest">
-                        {expandedTitle === article.title ? "Close ↑" : "Read More →"}
+                        {isExpanded ? "Close ↑" : "Read More →"}
                       </span>
                     </div>
-                    {expandedTitle === article.title && (
+                    {isExpanded && (
                       <p className="mt-md text-body-md text-secondary leading-relaxed border-t border-outline-variant pt-md">
                         {article.content}
                       </p>
                     )}
                   </article>
-                ))
-              ) : (
-                <p className="text-body-md text-secondary py-lg text-center">No articles match your search.</p>
-              )}
+                );
+              })}
             </div>
-            {totalPages > 1 && (
-              <div className="flex items-center justify-between pt-sm">
-                <button
-                  disabled={safePage === 1}
-                  onClick={() => setCurrentPage((p) => p - 1)}
-                  className="px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest border border-outline-variant text-secondary hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                >
-                  ← Previous
-                </button>
-                <span className="text-body-md text-secondary">{safePage} / {totalPages}</span>
-                <button
-                  disabled={safePage === totalPages}
-                  onClick={() => setCurrentPage((p) => p + 1)}
-                  className="px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest border border-outline-variant text-secondary hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                >
-                  Next →
-                </button>
-              </div>
-            )}
-          </div>
+          ) : (
+            <p className="text-body-md text-secondary py-lg text-center">No articles match your search.</p>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-between pt-sm">
+              <button
+                disabled={safePage === 1}
+                onClick={() => setCurrentPage((p) => p - 1)}
+                className="px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest border border-outline-variant text-secondary hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              >
+                ← Previous
+              </button>
+              <span className="text-body-md text-secondary">{safePage} / {totalPages}</span>
+              <button
+                disabled={safePage === totalPages}
+                onClick={() => setCurrentPage((p) => p + 1)}
+                className="px-sm py-xs rounded-sm font-label-bold text-label-bold uppercase tracking-widest border border-outline-variant text-secondary hover:border-primary hover:text-primary disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              >
+                Next →
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

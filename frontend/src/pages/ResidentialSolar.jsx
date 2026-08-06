@@ -30,7 +30,7 @@ export default function ResidentialSolar() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGKApWrINWKifMAgVsOCxMwqASrUoMXtX-Vllj2EOBuy-n_1E19AkP3b6LwU0Kqtdwf0vDvcND3esM3EOiR6-bOUAq0zIDL6HF7G5BrgOmpDy9_fQ8mgc3w6un2TFFpuo45aKJrP_ig7DBrzaB3GKmwlgax-1wl9TqzFoJvbNeSN2DGSPjDpqZ-rywqPlv0A0s4YgiwU5ft63-RQW43biugC6n8dWIgyowAqPMq1Le4dYqRo3r7fBb")`,
+              backgroundImage: `url("https://freyrenergy.com/wp-content/uploads/2025/08/ELEVATED.webp")`,
             }}
           ></div>
         </div>
