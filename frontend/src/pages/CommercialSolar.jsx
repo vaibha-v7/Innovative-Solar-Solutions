@@ -25,12 +25,12 @@ export default function CommercialSolar() {
   return (
     <div className="bg-background text-on-surface min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center overflow-hidden py-12">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden py-16">
         <div className="absolute inset-0 z-0">
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url(https://i0.wp.com/www.ecomena.org/wp-content/uploads/2018/01/solar-project-abu-dhabi.jpg)`,
+              backgroundImage: `url("/commercial-hero.jpg")`,
               filter: "brightness(0.6)"
             }}
           ></div>

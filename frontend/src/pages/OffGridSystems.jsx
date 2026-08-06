@@ -31,7 +31,7 @@ export default function OffGridSystems() {
           <div
             className="w-full h-full bg-cover bg-center opacity-60"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuASq4kbNNfUq-sJkJtXgtEzXp7Cx5KbErWGk0Ujn8nblwCrWdHRSHsfTXa-g_K-qXyiTtZuTL3_WTn5-zoTPY48V7hUWxgZ3pyMooeLa21NZ7QLDGD3eCA9XJixImE1s2c_lzWv0Y46tnaxp4EAAZ-cki5hkZibYEVi4bjbq-EkvvSGu9HI-LpjZV-FPKJAp9vITyj0ZEBgCQUWwR9SpaFKpdMqYeRJWNdcd50KzLNItWXaQ0_8REmkNQzA33v0-JSKduyjbuEmWJU")`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("/offgrid-hero.jpg")`,
             }}
           ></div>
         </div>
@@ -107,7 +107,7 @@ export default function OffGridSystems() {
             <div
               className="aspect-square bg-cover bg-center border-outline-variant border rounded-md"
               style={{
-                backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvDtdh0U0IpvvZjDgAiblTTxivQlWLL5ia2gkFFt4cc3h5QnNZnpmDA2ZHBV2JMvOWzLb5eBeP0WzfynEGeiNEyGo6laVDnjLwiM-GFzCbUxPQmKvB1AklCltgxcs7YxYwnK8rWlMS9O9A_SuyiD-cLCcMSZ30GTl1DuRMt4jwu9y-UxnkKrFmB_TcwFrDtrIyUxQk0clHs2WHhY9WsKPwuHFDy6-WVeJiMv253uglZ0xXwUslhab8")`,
+                backgroundImage: `url("/off-grid-feature.jpg")`,
               }}
             ></div>
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary p-md flex flex-col justify-end text-on-primary hidden md:flex rounded-sm shadow-lg">

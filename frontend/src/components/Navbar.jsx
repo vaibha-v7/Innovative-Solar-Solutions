@@ -39,7 +39,7 @@ export default function Navbar() {
         
         <Link to="/" onClick={handleLinkClick}>
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHFPEP9RFOhIaQcGU6yld9zG9mRCTlUH7YHD_KrPu0n77oddV9f_pAtD8om5-FXw8zKZA5wDmbtCW-d7DZZMO39okI1j4LvwkJ_xt7Y4bJHkTMlRTTGTELzUdve9xo1q26GFLCbzfyCkj_2CcAfpv3VqD4m8pc0pLk6qAPwkrjysRjxg6uRZqSq8pdfGCrflokgE79BjW-pbusIEArNzsgCHcQUERllXx26fs57gj88YzMASvdfcABAB_aIgR-KYDYrw"
+            src="/logo.png"
             alt="Innovative Solar Solutions"
             className="h-14 w-auto object-contain"
           />

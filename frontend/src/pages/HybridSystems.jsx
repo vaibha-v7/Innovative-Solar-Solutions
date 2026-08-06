@@ -31,7 +31,7 @@ export default function HybridSystems() {
           <img
             alt="Modern luxury home with solar panels"
             className="w-full h-full object-cover"
-            src="https://sunapecopower.com/wp-content/uploads/2026/03/What-Makes-a-Hybrid-System.png?wsr"
+            src="/hybrid-system.jpg"
           />
           <div className="absolute inset-0 bg-black/35"></div>
         </div>
