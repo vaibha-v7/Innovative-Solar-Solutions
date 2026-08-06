@@ -32,7 +32,7 @@ export default function OnGridSystems() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGX9ytCoOcuI4rdOWewhA_BkWXRPRy9F7DfjegcAi8eRErrw4Lu-5xVBshBgbp-i-LdE5Im-aNUyJKBR4x01rq9q8lF4A5DNv4ObLvGdzD7-HMzIDoa28Mwib4e0xWZe4k4O8jL_eD3JmmX6uu-LAeIj7XKQjPJgqlS7VtbX9p59zF4HDGv9Av1IFAhmf7Zepey_vnRkBM7756xp0pMGpAqIsKp4SDzcq4JfriMn3WUhu2Y1M973FvgZLRMd6JsOkhaABGoTSpY5I")`,
+              backgroundImage: `url("/on-grid-hero.jpg")`,
             }}
           ></div>
         </div>

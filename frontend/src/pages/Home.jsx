@@ -60,7 +60,7 @@ export default function Home() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+              backgroundImage: `url("/hero-bg.jpg")`,
             }}
           ></div>
         </div>
@@ -193,7 +193,7 @@ export default function Home() {
               <div className="absolute -inset-1 bg-primary/20 blur-sm rounded-lg"></div>
               <div className="relative aspect-video overflow-hidden rounded-lg border border-outline-variant shadow-lg">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSOFIDSgykWL6EOCk9tPk7xrY2sym8l-CcfS5J-MF7VDfZSb1xRuCErmGpMAk5kZfHqqcFq4CRmZctzAQx08Ecf6N53YlS2YM08gD65ugTUoPvdnmQXGwCTNYiV0svHJQkAQ7qG54YGKDszQSw-kUE8hNy26plibw2-ELxyKrp9CPsZOwSZBSAH-cvGvNiXvCPlydAwHVwPK7UjMOVGmG8q-9V08bX6fEnGZ8lmrgSJfFbIuSTk1vn4lP1lcglu3VihLhhujC6ZYs"
+                  src="/zam-structure.jpg"
                   alt="High-quality close-up of ZAM solar mounting structure"
                   className="w-full h-full object-cover"
                 />
@@ -294,7 +294,7 @@ export default function Home() {
             <div
               className="aspect-square bg-cover bg-right border-4 border-primary"
               style={{
-                backgroundImage: `url("https://img.magnific.com/premium-photo/black-man-electrician-solar-panels-installation-rooftop-sustainable-energy-with-eco-friendly-technology-maintenance-tools-male-engineering-with-infrastructure-power-from-sun_590464-165444.jpg?semt=ais_hybrid&w=740&q=80")`,
+                backgroundImage: `url("/electrician-rooftop.jpg")`,
               }}
             ></div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-md">
@@ -590,7 +590,7 @@ export default function Home() {
               <img
                 alt="Products"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1661997608910-da43d46039a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c29sYXIlMjBwYW5lbCUyMGJhdHRlcnl8ZW58MHx8MHx8fDA%3D"
+                src="/battery.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">
@@ -618,7 +618,7 @@ export default function Home() {
               <img
                 alt="Tutorial"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://media.istockphoto.com/id/1320775518/photo/solar-reverse.webp?a=1&b=1&s=612x612&w=0&k=20&c=tInS_lZukGgKmg_0lBvK5HRmQi_l0XjGs7T5D9_SRh8="
+                src="/inverter.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">
@@ -648,7 +648,7 @@ export default function Home() {
               <img
                 alt="Efficiency"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxojtQ9I-2VVJD9NOLGu0a-_TLrJFJcOceGEfWgN392FUVYjTmdx62DZkqQzv7VI1D_UvtPnAXtSOfUwaG0caW_Hsl-4OBYW9xQ27pu39JZ6SiwY5knpF5MxsKAhYTpel6CB5lgdfcGsl9sxvtFo1q08q2DOkTFTijLQo1ViqlVEEgWKMVdZ9qzuV3RovfoBmMaSZis-b4h3673tjyQxU-VwiT-Duo6gIEyfWs_Y7TQAsZIX2sIcAn"
+                src="/tracking.jpg"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -684,7 +684,7 @@ export default function Home() {
               <img
                 alt="Weather"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                src="https://images.unsplash.com/photo-1724041875463-ba0a3f2fc68c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFpbiUyMG9uJTIwc29sYXIlMjBwYW5uZWx8ZW58MHx8MHx8fDA%3D"
+                src="/weather.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div className="absolute top-4 right-4">

@@ -30,7 +30,7 @@ export default function AgriculturalSolar() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://res.cloudinary.com/hdiglobal/image/upload/f_auto,dpr_auto,q_auto,fl_progressive/w_5070,h_3169,x_0,y_5,c_crop/productioncms12/episerver/dda6c063-57ed-4b0c-a9ec-e5acd1ce29da/05_agrivoltaics_web.jpg")`,
+              backgroundImage: `url("/agricultural-hero.jpg")`,
               filter: "brightness(0.5)",
             }}
           ></div>

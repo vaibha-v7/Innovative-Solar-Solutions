@@ -30,7 +30,7 @@ export default function ResidentialSolar() {
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("https://freyrenergy.com/wp-content/uploads/2025/08/ELEVATED.webp")`,
+              backgroundImage: `url("/residential-hero.jpg")`,
             }}
           ></div>
         </div>
